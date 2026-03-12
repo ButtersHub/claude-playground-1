@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>סטודיו נעים יפו - אימונים</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>סטודיו נעים יפו</h1>
+            <p class="subtitle">מרכז כושר ואימונים</p>
+        </div>
+        <nav>
+            <button class="nav-btn active" data-section="home">בית</button>
+            <button class="nav-btn" data-section="equipment">ציוד</button>
+            <button class="nav-btn" data-section="workouts">אימונים</button>
+            <button class="nav-btn" data-section="timer">טיימר</button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="section active">
+            <div class="hero">
+                <h2>ברוכים הבאים לסטודיו נעים</h2>
+                <p>בחרו אימון, עקבו אחרי הסטים, והתקדמו בקצב שלכם</p>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-number" id="equipment-count">0</span>
+                    <span class="stat-label">סוגי ציוד</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number" id="workout-count">0</span>
+                    <span class="stat-label">תוכניות אימון</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number" id="exercise-count">0</span>
+                    <span class="stat-label">תרגילים</span>
+                </div>
+            </div>
+            <div class="quick-start">
+                <h3>התחלה מהירה</h3>
+                <div class="quick-buttons">
+                    <button class="quick-btn" data-workout="upper">פלג גוף עליון</button>
+                    <button class="quick-btn" data-workout="lower">פלג גוף תחתון</button>
+                    <button class="quick-btn" data-workout="full">אימון מלא</button>
+                    <button class="quick-btn" data-workout="core">ליבה ובטן</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Equipment Section -->
+        <section id="equipment" class="section">
+            <h2>הציוד בסטודיו</h2>
+            <div class="filter-bar">
+                <button class="filter-btn active" data-filter="all">הכל</button>
+                <button class="filter-btn" data-filter="free-weights">משקולות חופשיות</button>
+                <button class="filter-btn" data-filter="machines">מכונות</button>
+                <button class="filter-btn" data-filter="cardio">קרדיו</button>
+                <button class="filter-btn" data-filter="accessories">אביזרים</button>
+            </div>
+            <div class="equipment-grid" id="equipment-grid"></div>
+        </section>
+
+        <!-- Workouts Section -->
+        <section id="workouts" class="section">
+            <h2>תוכניות אימון</h2>
+            <div class="filter-bar">
+                <button class="filter-btn active" data-filter="all">הכל</button>
+                <button class="filter-btn" data-filter="upper">פלג עליון</button>
+                <button class="filter-btn" data-filter="lower">פלג תחתון</button>
+                <button class="filter-btn" data-filter="full">גוף מלא</button>
+                <button class="filter-btn" data-filter="core">ליבה</button>
+            </div>
+            <div class="workouts-list" id="workouts-list"></div>
+        </section>
+
+        <!-- Timer Section -->
+        <section id="timer" class="section">
+            <h2>טיימר מנוחה</h2>
+            <div class="timer-container">
+                <div class="timer-display" id="timer-display">01:30</div>
+                <div class="timer-buttons">
+                    <button class="timer-preset" data-time="30">30 שניות</button>
+                    <button class="timer-preset" data-time="60">דקה</button>
+                    <button class="timer-preset active" data-time="90">דקה וחצי</button>
+                    <button class="timer-preset" data-time="120">2 דקות</button>
+                </div>
+                <div class="timer-controls">
+                    <button class="timer-ctrl" id="timer-start">התחל</button>
+                    <button class="timer-ctrl" id="timer-reset">איפוס</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Active Workout Modal -->
+        <div class="modal" id="workout-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 id="modal-title"></h3>
+                    <button class="close-btn" id="close-modal">&times;</button>
+                </div>
+                <div class="modal-body" id="modal-body"></div>
+            </div>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
